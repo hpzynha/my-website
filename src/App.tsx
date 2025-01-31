@@ -283,7 +283,7 @@ function App() {
                 href={urlWhatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-custom-blue text-white py-3 px-6 rounded-md hover:bg-custom-hover-blue transition-colors flex items-center gap-2"
+                className="bg-custom-blue text-white py-3 px-6 rounded-md hover:bg-custom-blue-light transition-colors flex items-center gap-2"
               >
                 <FaWhatsapp size={24} />
                 <span>Fale comigo no WhatsApp</span>

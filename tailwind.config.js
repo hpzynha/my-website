@@ -9,7 +9,6 @@ export default {
       colors: {
         'custom-blue': '#084887',
         'custom-blue-light': 'rgba(8, 72, 135, 0.8)',
-        'custom-hover-blue': 'rgba(8, 72, 135, 0.8)',
       }
     },
   },
