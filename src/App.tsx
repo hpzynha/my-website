@@ -6,14 +6,17 @@ import {
   FaInstagram,
   FaPython,
   FaSwift,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { FaFlutter } from "react-icons/fa6";
 import { LuMapPin } from "react-icons/lu";
 import { MdOutlineEmail } from "react-icons/md";
 
-
-
 function App() {
+  const telephone = "5511915348349";
+  const message = "Olá, Larissa!";
+  const urlWhatsapp = `https://wa.me/${telephone}?text=${encodeURI(message)}`;
+
   return (
     <div className="bg-stone-50 min-h-screen">
       {/* Header */}
@@ -123,53 +126,63 @@ function App() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Projetos</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <a href="#" target="_blank" rel="noopener noreferrer" className="block">
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <img
-                src="https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                alt="Projeto Receitas"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">App de Receitas</h3>
-                <p className="text-gray-600 mb-4">
-                  Um app de receitas criado com Flutter, integrando API de
-                  receitas e funcionalidades offline.
-                </p>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
-                    Flutter
-                  </span>
-                  <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
-                    Firebase
-                  </span>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img
+                  src="https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                  alt="Projeto Receitas"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2">App de Receitas</h3>
+                  <p className="text-gray-600 mb-4">
+                    Um app de receitas criado com Flutter, integrando API de
+                    receitas e funcionalidades offline.
+                  </p>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                      Flutter
+                    </span>
+                    <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                      Firebase
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="block">
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <img
-                src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                alt="Projeto Finanças"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">App de Finanças</h3>
-                <p className="text-gray-600 mb-4">
-                  Um app de gerenciamento financeiro desenvolvido em Swift, com
-                  sincronização em nuvem.
-                </p>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">
-                    Swift
-                  </span>
-                  <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">
-                    CloudKit
-                  </span>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <img
+                  src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                  alt="Projeto Finanças"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2">App de Finanças</h3>
+                  <p className="text-gray-600 mb-4">
+                    Um app de gerenciamento financeiro desenvolvido em Swift,
+                    com sincronização em nuvem.
+                  </p>
+                  <div className="flex gap-2">
+                    <span className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">
+                      Swift
+                    </span>
+                    <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">
+                      CloudKit
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
             </a>
           </div>
         </div>
@@ -256,7 +269,7 @@ function App() {
               <h3 className="text-xl font-bold mb-4">Informações de Contato</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <MdOutlineEmail className="text-custom-blue"size={24} />
+                  <MdOutlineEmail className="text-custom-blue" size={24} />
                   <span>larissa.nogueira.rocha@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -265,7 +278,18 @@ function App() {
                 </div>
               </div>
             </div>
-           {/* Seção de contato */}
+            <div className="flex items-center justify-center">
+              <a
+                href={urlWhatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-custom-blue text-white py-3 px-6 rounded-md hover:bg-custom-hover-blue transition-colors flex items-center gap-2"
+              >
+                <FaWhatsapp size={24} />
+                <span>Fale comigo no WhatsApp</span>
+              </a>
+            </div>
+            {/* Seção de contato */}
           </div>
         </div>
       </section>
